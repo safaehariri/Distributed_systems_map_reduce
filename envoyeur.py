@@ -217,8 +217,6 @@ def recevoir_messages():
 
                 elif etat[0] == 8 :
                     result_dict[machine] = json.loads(message_reçu)
-
-                    print(machine , result_dict)
                     tab_fin_phase_8[machines.index(machine)] = True
                     if all(tab_fin_phase_8):
                         final_result = result_dict[machines[0]] 
